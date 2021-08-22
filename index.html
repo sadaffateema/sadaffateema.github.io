@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Sadaf Fateema</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <script src="js/script.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+        <script type="text/javascript">
+            (function() {
+                emailjs.init('user_4jwsCxJIeZCPsiSEdZLHV');
+            })();
+        </script>
+        <script type="text/javascript">
+            window.onload = function() {
+                document.getElementById('contact-form').addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    // generate a five digit number for the contact_number variable
+                    this.contact_number.value = Math.random() * 100000 | 0;
+                    // these IDs from the previous steps
+                    emailjs.sendForm('contact_service', 'contact_form', this)
+                        .then(function() {
+                            console.log('SUCCESS!');
+                        }, function(error) {
+                            console.log('FAILED...', error);
+                        });
+                });
+            }
+        </script>
+
+    </head>
+    <body>
+
+        <header class="container">
+            <div class="container-nav">
+                <div class="titles">
+                    <a href="#home"><h1>Sadaf Fateema</h1></a>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- -------------------------------------- MAIN -------------------------------------- -->
+        <div class="main">
+            
+            <!-- -------------------------------------- HEADER -------------------------------------- 
+            <div class="header">
+                <div class="contaier">
+                    <div class="row flex-end">
+                        <button type="button" class="nav-toggler">
+                            <span></span>
+                        </button>
+                        <nav class="nav">
+                            <div class="nav-inner">
+                                <ul>
+                                    <li><a href="#home" class="nav-item link-item">Home</a></li>
+                                    <li><a href="#about" class="nav-item link-item">About</a></li>
+                                    <li><a href="#projects" class="nav-item link-item">Projects</a></li>
+                                    <li><a href="#contact" class="nav-item link-item">Contact me</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+
+            -->
+            <!-- -------------------------------------- HOME -------------------------------------- -->
+            <section class="home-section align-items-center" id="home">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="home-text">
+                            <h3>Hello, I'm </h3><h1>Sadaf Fateema.</h1>
+                            <a href="#about" class="btn">more about me</a>
+                            <a href="resume.pdf" target="blank" class="btn">Resume</a>
+                        </div>
+                        <div class="home-img" id="home-img">
+                            <div class="img-box">
+                                <img src="imgs/home.png" alt="profile img" class="img-home">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- -------------------------------------- ABOUT -------------------------------------- -->
+            <section class="about-section sec-padding" id="about">
+                <div class="container">
+                    <div class="row">
+                        <div class="section-title">
+                            <h2>About me</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="about-img">
+                            <div class="img-box">
+                                <img src="imgs/about.jpg" alt="about img" id="img-about">
+                            </div>
+                        </div>
+                        <div class="about-text">
+                            <p> Indian Native, with a passion for designing websites and analyze data & report insights. Product allows me to use my technical background with my passion for organization and leadership. I never knew I could be immersed in the tech world without spending my days behind a computer screen filled with code, but now, I cannot wait to do exactly that.</p>
+                            <p> <br>I'm open to Internships, Volunteer as well as Part-time opportunities all over Kolkata. I would love to work with a firm with great integrity, who seek to excel in their field, who respect and value their employees, and who serve their community as well.</p>
+                            <p> <br>In my free time, you can find me reading Manga or volunteering at the Pankh Foundation.</p>
+                            <h3>Skills</h3>
+                            <div class="skills">
+                                <div class="skill-item">HTML5</div>
+                                <div class="skill-item">CSS3</div>
+                                <div class="skill-item">JavaScript</div>
+                                <div class="skill-item">Bootstrap</div>
+                                <div class="skill-item">Python</div>
+                                <div class="skill-item">C</div>
+                                <div class="skill-item">Excel</div>
+                                <div class="skill-item">SQL</div>
+                                <div class="skill-item">Tableau</div>
+                            </div>
+                            
+
+                            <!-- -------------------------------------- EXPERIENCE -------------------------------------- -->
+                            <div class="about-tabs">
+                                <button type="button" class="tab-item active" data-target="#education">Experience</button> 
+                            </div>
+                            <div class="tab-content">
+                                <div class="timeline">
+                                    <div class="timeline-item">
+                                        <span class="date">JULY 2021</span>
+                                        <h4>The Sparks Foundation-<br>Data Science & Business Analytics Intern(Remote)</h4>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <span class="date">MARCH 2021 - MAY 2021</span>
+                                        <h4>GirlScript Summer of Code-<br>Open Source Developer(Remote)</h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- -------------------------------------- EDUCATION -------------------------------------- -->
+                            <div class="about-tabs">
+                                <button type="button" class="tab-item active" data-target="#education">Education</button> 
+                            </div>
+                            <div class="tab-content">
+                                <div class="timeline">
+                                    <div class="timeline-item">
+                                        <span class="date">2018-2022</span>
+                                        <h4>Bachelor of Technology in Information Technology-<br>Calcutta Institute of Engineering and Management.</h4>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <span class="date">2016-2018</span>
+                                        <h4>ISC-<br>Ling Liang High School</h4>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <span class="date">2004-2016</span>
+                                        <h4>ICSE-<br>Ling Liang High School</h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a href="resume.pdf" target="blank" class="btn">Download Resume</a>
+                            <a href="#contact" class="btn">Contact me</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- -------------------------------------- PROJECTS SECTION -------------------------------------- -->
+            <section class="project-section sec-padding" id="projects">
+                <div class="container">
+                    <div class="row">
+                        <div class="section-title">
+                            <h2>Projects</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- -------------------------------------- PROJECTS -------------------------------------- -->
+                        
+                        <div class="project-item">
+                            <!--
+                                <div class="project-item-thumbnail">
+                                    <img src="#" alt="proj1">
+                                </div>
+                            -->
+                            <h3 class="project-item-title">Portfolio Website</h3>
+                            <button onclick="window.location.href='#home';" type="button" class="btn view-project-btn">View Project</button>
+                            <div class="project-item-details">
+                                <div class="description">
+                                    <p>Built a personal portfolio website.</p>
+                                </div><br>
+                                <div class="general-info">
+                                    <ul>
+                                        <li>Created - <span>August 2021</span></li>
+                                        <li>Skills used - <span>HTML, CSS, JavaScript</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="project-item">
+                            <!--
+                                <div class="project-item-thumbnail">
+                                    <img src="#" alt="proj2">
+                                </div>
+                            -->
+                            <h3 class="project-item-title">Home Price Prediction</h3>
+                            <button onclick="window.open('https://github.com/sadaffateema/Home-price-Prediction/tree/main');" type="button" class="btn view-project-btn" >View Project</button>
+                            <div class="project-item-details">
+                                <div class="description">
+                                    <p>Built a model using Sklearn and Linear regression using banglore home prices dataset from kaggle.com to predict the price of houses.</p>
+                                </div><br>
+                                <div class="general-info">
+                                    <ul>
+                                        <li>Created - <span>June 2021</span></li>
+                                        <li>Skills used - <span>Pandas, NumPy, Matplotlib, Sklearn, Linear Regression</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-item">
+                            <!--
+                                <div class="project-item-thumbnail">
+                                    <img src="#" alt="proj3">
+                                </div>
+                            -->
+                            <h3 class="project-item-title">Prediction Using Supervised ML </h3>
+                            <button onclick="window.open('https://github.com/sadaffateema/Prediction-using-Supervised-ML-Task-1-');" type="button" class="btn view-project-btn">View Project</button>
+                            <div class="project-item-details">
+                                <div class="description">
+                                    <p>Built a model using Sklearn and Linear Regression to predict the percentage of a student based on the no. of study hours.</p>
+                                </div>
+                                <br>
+                                <div class="general-info">
+                                    <ul>
+                                        <li>Created - <span>JULY 2021</span></li>
+                                        <li>Tech used - <span>Pandas, NumPy, Matplotlib, Sklearn, Seaborn, Linear Regression</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-item">
+                            <!--
+                                <div class="project-item-thumbnail">
+                                    <img src="#" alt="proj4">
+                                </div>
+                            -->
+                            <h3 class="project-item-title">Prediction Using Unsupervised ML </h3>
+                            <button onclick="window.open('https://github.com/sadaffateema/Prediction-using-Unsupervised-ML-Task-2-');" type="button" class="btn view-project-btn">View Project</button>
+                            <div class="project-item-details">
+                                <div class="description">
+                                    <p>Built a model using Sklearn and K-means Clustering to predict the optimal number of clusters in Iris and represent it visually.</p>
+                                </div>
+                                <br>
+                                <div class="general-info">
+                                    <ul>
+                                        <li>Created - <span>JULY 2021</span></li>
+                                        <li>Tech used - <span>Pandas, NumPy, Matplotlib, Sklearn, Seaborn, K-means Clustering</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-item">
+                            <!--
+                                <div class="project-item-thumbnail">
+                                    <img src="#" alt="proj4">
+                                </div>
+                            -->
+                            <h3 class="project-item-title">Prediction using Decision Tree Algorithm</h3>
+                            <button onclick="window.open('https://github.com/sadaffateema/Prediction-using-Decision-Tree-Algorithm-Task-6-');" target="_blank" type="button" class="btn view-project-btn" >View Project</button>
+                            <div class="project-item-details">
+                                <div class="description">
+                                    <p>Built a Decision Tree classifier using Sklearn and visualized it graphically.</p>
+                                </div>
+                                <br>
+                                <div class="general-info">
+                                    <ul>
+                                        <li>Created - <span>JULY 2021</span></li>
+                                        <li>Tech used - <span>Pandas, Matplotlib, Sklearn, Decision Tree Classifier</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- -------------------------------------- CONTACT ME -------------------------------------- -->
+            <section class="contact-section sec-padding" id="contact">
+                <div class="container">
+                    <div class="row">
+                        <div class="section-title">
+                            <h2>Contact me</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="contact-form">
+                            <form id="form">
+                                <div class="row">
+                                    <div class="input-group">
+                                        <input type="text" id="user_name" placeholder="Name" class="input-control" required>
+                                    </div>
+                                    <div class="input-group">
+                                        <input type="email" id="user_email" placeholder="Email" class="input-control" required>
+                                    </div>
+                                    <div class="input-group">
+                                        <input type="text" id="subject" placeholder="Subject" class="input-control" required>
+                                    </div>
+                                    <div class="input-group">
+                                        <textarea id="msg" placeholder="Message" class="input-control" required></textarea>
+                                    </div>
+                                    <div class="submit-btn">
+                                        <button onclick="sendMessage();" type="submit" class="btn">Send Message</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="contact-info">
+                            <div class="contact-info-item">
+                                <h3>Email</h3>
+                                <p>sadaffateema1@gmail.com</p>
+                            </div>
+                            <div class="contact-info-item">
+                                <h3>Social links</h3>
+                                <div class="social-links">
+                                    <a href="https://www.linkedin.com/in/sadaffateema/" target="_blank"><i class="fa fa-linkedin"></i></a>
+                                    <a href="https://github.com/sadaffateema" target="_blank"><i class="fa fa-github"></i></a>
+                                    <a href="https://t.me/sadaffateema" target="_blank"><i class="fa fa-telegram"></i></a>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+
+
+        </div>
+
+
+
+
+    </body>
+    <footer>
+       <p>© All rights are reserved | August 2021 </p>
+    </footer>
+</html>
